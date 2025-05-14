@@ -11,7 +11,7 @@ namespace OOProjectBasedLeaning1
     {
 
         private List<Room> vacantRooms;
-        private List<Room> bookingList = new List<Room>();
+        private List<Room> guestBook = new List<Room>();
 
         public Hotel()
         {
@@ -63,7 +63,7 @@ namespace OOProjectBasedLeaning1
 
             }
 
-            bookingList.Add(AcquireRoom().AddGuest(guest));
+            guestBook.Add(AcquireRoom().AddGuest(guest));
 
         }
 
@@ -78,7 +78,7 @@ namespace OOProjectBasedLeaning1
 
             }
 
-            bookingList.Add(AcquireRoom().AddGuest(guests));
+            guestBook.Add(AcquireRoom().AddGuest(guests));
 
         }
 
@@ -90,7 +90,7 @@ namespace OOProjectBasedLeaning1
             if (room.RemoveGuest(guest).IsEmpty())
             {
 
-                bookingList.Remove(room);
+                guestBook.Remove(room);
 
                 ReleaseRoom(room);
 
